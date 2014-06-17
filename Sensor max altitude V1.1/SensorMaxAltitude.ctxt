@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.params=w\ angleTilt\ angleView
+comment0.target=double\ maximumAltitudeMethod(int,\ double,\ double)
+comment0.text=\r\n\ MaximumAltitudeMethod\ takes\ arguments,\ given\ by\ the\ user,\ and\ calculates\ maximum\ altitude\ from\ those\ inputs.\r\n\ \r\n\ @param\ \ w\ \ \ parameter\ w\ corresponds\ to\ the\ length\ or\ width\ of\ the\ camera\ footprint,\ given\ by\ the\ user\r\n\ @param\ \ angleView\ \ \ parameter\ angleView\ is\ the\ field\ of\ view\ in\ radians\ (horizonal\ or\ vertical)\ of\ the\ sensor\ payload,\ given\ by\ the\ user\r\n\ @param\ \ angleTile\ \ \ parameter\ angleTilt\ is\ the\ angle\ of\ tilt\ in\ radians\ of\ the\ sensor\ payload\ at\ some\ time,\ given\ by\ the\ user\r\n\ @return\ \ \ \ \ the\ result\ for\ maximumAltitude\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+numComments=2

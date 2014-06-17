@@ -10,12 +10,29 @@
  * respond to the user prompts in the 'Console View' beneath it!
 
  * @author Courtney Thurston, www.courtneythurston.com
- * @version 6/17/2014
+ * @version 1.1, 6/17/2014
  */
 
 import java.util.*;
-class SensorClassAltitude
+class SensorMaxAltitude
 {
+    private double maximumAltitude;
+    
+    /**
+     * MaximumAltitudeMethod takes arguments, given by the user, and calculates maximum altitude from those inputs.
+     * 
+     * @param  w   parameter w corresponds to the length or width of the camera footprint, given by the user
+     * @param  angleView   parameter angleView is the field of view in radians (horizonal or vertical) of the sensor payload, given by the user
+     * @param  angleTile   parameter angleTilt is the angle of tilt in radians of the sensor payload at some time, given by the user
+     * @return     the result for maximumAltitude
+     */
+    public double maximumAltitudeMethod(int w, double angleTilt, double angleView)
+    {
+        maximumAltitude = ((Math.cos(angleTilt)) * ((w / 2) / (Math.sin((angleView / 2)))) * (Math.cos((angleTilt + angleView / 2))));
+        System.out.println("Given those inputs, your maximum altitude is " + maximumAltitude + " feet!");
+        return maximumAltitude;
+    }
+    
     public static void main (String[] args)
     {
         // Initializing scanner
@@ -34,7 +51,7 @@ class SensorClassAltitude
         System.out.println("This must correspond to whether you gave the horizontal or vertical component for angle of view.");
         int w = in.nextInt();
         
-        SensorMaxAltitudeMethods rh = new SensorMaxAltitudeMethods(); //creating new instance of SensorMaxAltitudeMethods to enable using non-static method in a static context
+        SensorMaxAltitude rh = new SensorMaxAltitude(); //creating new instance of SensorMaxAltitudeMethods to enable using non-static method in a static context
         rh.maximumAltitudeMethod(w, angleTilt, angleView); //passing user input as args into the maximumAltitudeMethod method
     }
 }

@@ -10,7 +10,7 @@
  * respond to the user prompts in the 'Console View' beneath it!
 
  * @author Courtney Thurston, www.courtneythurston.com
- * @version 6/17/2014
+ * @version 1.0, 6/17/2014
  */
 
 import java.util.*;
